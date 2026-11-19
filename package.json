@@ -1,0 +1,7 @@
+{
+  "name": "rath-user-guide",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "astro build", "dev": "astro dev" },
+  "dependencies": { "@astrojs/starlight": "^0.35.0", "astro": "^5.0.0" }
+}
