@@ -24,6 +24,8 @@ When Rath cannot answer or a chat stops, the message on screen is the best start
 
 **Sign in to continue** means Rath needs access to the selected model. Connect the provider or add its key, then try again. **Sign-in failed:** is followed by the provider's error; read that detail and check the account or try signing in again. **No active Rath chat to sign in through — open a chat first.** tells you to open a chat before signing in.
 
+**Your Claude plan doesn't cover Rath** means Claude is charging apps like Rath to your *extra usage* instead of your plan's normal limits, and that extra usage is empty or switched off. You have three ways forward: add extra usage in your Claude account's usage settings, add an API key from the provider's console (choose **Add your key** on the message), or pick a model from another provider. Switching to a key or another provider needs no changes to your Claude plan. If the message in the chat shows Anthropic's own wording about third-party apps and extra usage, this is the cause.
+
 **Too many requests right now** means wait a moment and try again. The underlying problem can also be a provider limit or low balance, so check your provider account if it continues. **Rath cannot connect** suggests checking your internet connection before trying again. **Rath could not start** suggests checking connection and settings; if it says to open a folder, open one first.
 
 ### Missing history or refused actions

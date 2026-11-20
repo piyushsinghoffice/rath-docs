@@ -19,6 +19,8 @@ Have your provider account ready. For an API-key connection, obtain a key from t
 
 When the connection and model are usable, Rath can answer in the chat. The available choices depend on the account and provider. You can also start with **Rath: Set Provider API Key…** and choose **Use a subscription**.
 
+> **A Claude subscription may bill separately.** At the time of writing, Claude charges apps like Rath that sign in with a Claude subscription to your account's *extra usage*, not to your plan's normal limits. If a chat stops with **Your Claude plan doesn't cover Rath**, add extra usage, connect with an API key instead, or choose a model from another provider. See [Troubleshooting](/rath-docs/troubleshooting/).
+
 ## Connect with a key
 
 1. Open the Command Palette and choose **Rath: Set Provider API Key…**.
@@ -38,6 +40,7 @@ For example, use a subscription when your provider offers that sign-in route; us
 - **No subscription providers are available.** No subscription choices were returned; check your provider access or use an available API-key connection.
 - **API key is required.** Enter a nonempty key. If a provider rejects it, check the key and the provider account before replacing it.
 - **No API keys are configured yet.** There is no saved key to clear. **No providers signed in** means there is no subscription to sign out of.
+- **Your Claude plan doesn't cover Rath.** Claude is charging Rath to extra usage that is empty or off. Add extra usage in your Claude account, use an API key, or choose another provider's model.
 - If a model says its provider is not signed in, connect that provider or choose another available model.
 
 See [Models and thinking level](/rath-docs/models/), [Getting started](/rath-docs/getting-started/) and [Troubleshooting](/rath-docs/troubleshooting/).
