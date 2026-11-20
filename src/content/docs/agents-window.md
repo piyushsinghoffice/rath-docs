@@ -17,7 +17,7 @@ The Agents Window gives you a dedicated place to start and return to Rath sessio
 
 You should see your request and Rath's response in the conversation. The session appears in the **Sessions** list, where you can select it to return to the conversation. Depending on the grouping selected, the list shows sessions by folder or in **Recent** and **Older** groups.
 
-<!-- SCREENSHOT: Agents Window with a Rath session selected -->
+![The Agents Window with a Rath session selected and its changes panel](../../assets/screenshots/agents-window.png)
 
 ## Move between tasks
 

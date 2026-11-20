@@ -20,7 +20,7 @@ You need a working AI connection and a chat. **Cards in chat** and **Interfaces 
 4. Look for the card or interface in the conversation. Its title, contents and control labels depend on what Rath creates. If it has fields or choices, fill them in and use a button to respond. Check the values first.
 5. Continue in chat if the display needs changing: “Add a progress indicator for the review, currently halfway done.”
 
-<!-- SCREENSHOT: Card and interface controls in a Rath chat -->
+![A card in a chat with a slider, a choice list, a switch and a button](../../assets/screenshots/card-controls.png)
 
 A card button sends its visible label and any control values as your next message when the message box is empty and Rath is idle. If Rath is busy or you have a draft, the response is placed in the message box instead. If the button has a different message behind its label, that message and the control values are placed in the message box for you to review and send. Interface button actions also send information back to the conversation. Check your choices before clicking, especially when an action could change your work.
 
