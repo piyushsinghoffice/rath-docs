@@ -17,7 +17,7 @@ Before you start, open a Rath chat and connect a model provider using a subscrip
 
 You can also use **Rath: Switch to Next Model** or **Rath: Switch to Previous Model** from the Command Palette while the chat tab is active. The commands wrap around the available models. They have no default shortcuts; assign your own in Keyboard Shortcuts.
 
-<!-- SCREENSHOT: Model and reasoning effort controls -->
+![The thinking effort slider open above the message box](../../assets/screenshots/reasoning.png)
 
 Which models you see depends on the providers you have connected; the model selector under the message box is always the final word for your account. Rath does not pick a model for you until you choose one, so do not assume everyone starts on the same model.
 

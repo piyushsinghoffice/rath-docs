@@ -21,7 +21,7 @@ Before you start, open the folder and a Rath chat. The choices below are in the 
 4. With **Ask before changes**, read the proposed action when **Allow Rath to use …?** appears. Select **Allow** for that action, **Deny** to refuse it, or **Always Allow … in This Chat** to allow that tool in this chat. Choose the last option only if you are comfortable with later uses of the same tool.
 5. Review any changes before relying on them. See [Reviewing and undoing changes](/rath-docs/reviewing-changes/).
 
-<!-- SCREENSHOT: Permission selector showing the available modes -->
+![The permission menu with Full access, Read-only, Ask before changes, Plan and No tools](../../assets/screenshots/permissions.png)
 
 ## Try it
 

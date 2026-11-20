@@ -18,7 +18,7 @@ Before you start, connect a model provider, the service that supplies Rath's mod
 
 For another fresh conversation, try **Rath: Quick Ask** again with “Explain the main purpose of this project in plain language.” Each non-empty request starts a new chat; it does not add the question to the conversation you were reading. Cancel the box or leave it blank if you change your mind.
 
-<!-- SCREENSHOT: Quick Ask input and the resulting new chat -->
+![The Quick Ask box at the top of the window](../../assets/screenshots/quick-ask.png)
 
 ## Move between models
 

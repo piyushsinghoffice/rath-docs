@@ -17,7 +17,7 @@ Before you start, you need a Rath build supplied to you, a folder to work with, 
 5. Choose an available model, type “Explain what is in this folder and suggest where I should start,” and select **Send**.
 6. Watch the conversation for Rath's activity and answer. Ask a follow-up if you need a simpler explanation or want it to focus on one item.
 
-<!-- SCREENSHOT: A new chat with the provider and message controls visible -->
+![A new Rath chat with the example ideas and the message box](../../assets/screenshots/new-chat.png)
 
 You should see your message followed by Rath's response. The response is a starting point: check important details against the original material. If you later want edits, choose an appropriate mode in [Permission modes](/rath-docs/permissions/) before asking for them.
 

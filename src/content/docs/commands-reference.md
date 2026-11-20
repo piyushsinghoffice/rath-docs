@@ -14,7 +14,7 @@ Use the Command Palette to find an action by name, start it, and then follow the
 
 For example, choose **Rath: Quick Ask** and type “Summarize this project in five points.” To find a previous discussion, choose **Rath: Search Message History…** and enter a phrase from it. To change selected text, choose **Rath: Ask Rath to Edit Selection** and type “Make this paragraph shorter.”
 
-<!-- SCREENSHOT: Command Palette filtered to Rath commands -->
+![The Command Palette filtered to Rath commands](../../assets/screenshots/command-palette.png)
 
 The names below include the **Rath:** prefix shown in the palette. A dash means there is no existing guide for that particular command. Some commands appear only in a particular window or when their conditions are met.
 

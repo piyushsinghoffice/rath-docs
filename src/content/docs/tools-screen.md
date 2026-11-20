@@ -21,7 +21,7 @@ Before you start, open a Rath chat. To use tools from a connected service, set u
 
 The checkbox changes immediately. When Rath next needs an enabled, available tool, it may choose to use it; a checked box does not force it to do so. If confirmation applies, watch the chat for the request and read it before deciding. Hover over a shortened description to read it in full.
 
-<!-- SCREENSHOT: Tools screen showing search, categories, Enable and Ask User controls -->
+![The Tools screen with search and per-tool switches](../../assets/screenshots/tools-screen.png)
 
 ## Match tools to your permissions
 

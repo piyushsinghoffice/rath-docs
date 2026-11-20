@@ -16,7 +16,7 @@ Before you start, open a Rath chat. Some commands need an existing conversation,
 
 For example, send `/access`, select **Read-only**, then ask: “Summarize the project without changing anything.” Or send `/model`, choose an available model, and ask: “Explain this proposal in plain language.” The selected control reflects your choice. See [Permissions](/rath-docs/permissions/) and [Models and thinking level](/rath-docs/models/) for the trade-offs.
 
-<!-- SCREENSHOT: Slash command suggestions in the chat composer -->
+![The list of slash commands shown after typing a slash](../../assets/screenshots/slash-commands.png)
 
 ## Choose settings and material
 
