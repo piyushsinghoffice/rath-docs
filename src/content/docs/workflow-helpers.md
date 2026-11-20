@@ -19,7 +19,7 @@ Open the relevant project and a Rath chat with a connected model. For terminal h
 
 Rath receives up to the last 120 lines of the active terminal. Check that these lines contain the relevant error before starting. For example, after a failed check, use the fix action; after an unfamiliar warning, use the explain action. You can follow up in chat with “Explain that warning without technical jargon” or “What should I check before accepting this fix?”
 
-<!-- SCREENSHOT: Terminal context menu with Rath actions -->
+![The terminal's right-click menu with Explain Last Terminal Command and Fix Last Terminal Command Failure](../../assets/screenshots/terminal-menu.png)
 
 ## Work with project changes
 
