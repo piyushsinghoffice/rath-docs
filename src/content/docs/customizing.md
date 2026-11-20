@@ -19,7 +19,7 @@ Make Rath more comfortable to use by choosing what it may change, showing or hid
 
 If you choose **Full**, start a new chat for its extra abilities. If Rath proposes a setting change, **Allow the Agent to Change a Setting?** shows the current and new values. Choose **Allow** only if you want that change. A request may need clarification or produce a different result; describe the location and the content you want as specifically as you can.
 
-<!-- SCREENSHOT: Rath settings in the settings view -->
+![Rath settings found by searching for Rath in Settings](../../assets/screenshots/rath-settings.png)
 
 ## Make more room or bring additions back
 

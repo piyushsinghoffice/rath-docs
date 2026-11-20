@@ -19,7 +19,7 @@ For a quick question, choose **Rath: Quick Ask** from the Command Palette or **Q
 
 Open chats appear above previous chats in the list. A small bar at the left of a row marks an open chat; the selected chat is highlighted. A new chat can initially say **New Chat** while its title is being established.
 
-<!-- SCREENSHOT: Chat list with search and recent chats -->
+![The chat list filtered by a search](../../assets/screenshots/chat-list.png)
 
 ## Find, reopen, and rename
 

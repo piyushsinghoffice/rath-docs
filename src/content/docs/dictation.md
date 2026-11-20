@@ -18,7 +18,7 @@ Before you start, open a Rath chat, connect a microphone and allow Rath access t
 
 The built-in model turns speech into text on your computer. Downloading it does not send a chat request; you still choose when to send the resulting text.
 
-<!-- SCREENSHOT: Speech to Text settings showing the model installation row -->
+![The speech settings with the model row](../../assets/screenshots/speech-settings.png)
 
 ## Speak a message
 

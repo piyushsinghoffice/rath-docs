@@ -20,6 +20,8 @@ For another fresh conversation, try **Rath: Quick Ask** again with “Explain th
 
 ![The Quick Ask box at the top of the window](../../assets/screenshots/quick-ask.png)
 
+![The new chat Quick Ask starts with your question](../../assets/screenshots/quick-ask-result.png)
+
 ## Move between models
 
 1. Select the Rath chat tab you want to use and wait until its current work finishes.

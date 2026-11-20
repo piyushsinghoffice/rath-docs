@@ -18,7 +18,7 @@ Before you start, open the folder you want Rath to work in. The two restricted c
 3. Select **New Chat** to start a new conversation. The chosen setting takes effect in newly started chats; an existing chat does not pick up the change.
 4. Ask Rath to do the task and select **Send**. If you use **Ask before changes**, read the proposed command and choose whether to allow it. Watch the conversation for the command's result and Rath's answer.
 
-<!-- SCREENSHOT: Shell sandbox setting and its choices -->
+![The sandbox setting in Settings](../../assets/screenshots/shell-sandbox.png)
 
 When it works, the setting shows your selected value and the new chat can run permitted commands. A command that tries a blocked operation can fail instead of completing that operation. Check the result before assuming the task succeeded.
 

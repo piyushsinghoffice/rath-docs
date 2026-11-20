@@ -29,7 +29,7 @@ Choose Markdown for a readable transcript; it presents messages in order and lis
 4. In **Export Chat as Markdown** or **Export Chat as JSON**, choose a name and location, then save. Markdown uses the `.md` format; JSON uses `.json`.
 5. Look for **Chat exported to …**. The notification shows where the copy was saved. Open the saved copy to review it.
 
-<!-- SCREENSHOT: Chat plus menu showing JSON and Markdown export -->
+![The plus menu above the message box: attach, context, compact and export](../../assets/screenshots/composer-menu.png)
 
 ## If it doesn't work
 

@@ -16,7 +16,7 @@ Before you start, open a Rath chat and connect a provider. See [Getting started]
 
 For example, try: “Summarize this project for a new teammate in five bullet points.” Or attach a picture and ask: “Describe this screen and suggest three ways to make it easier to use.” Rath's response depends on the material and the model available to your provider.
 
-<!-- SCREENSHOT: Chat composer with attachment menu and send controls -->
+![The plus menu above the message box: attach, context, compact and export](../../assets/screenshots/composer-menu.png)
 
 ## Add material to a message
 

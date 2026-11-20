@@ -19,7 +19,7 @@ Choose a fork when you want to return to a particular point; choose a clone when
 
 For example, after asking “Suggest three approaches to this project,” fork from the answer and ask “Develop the first approach into a checklist.” Return to the original and fork again to explore the second. Or, after a longer discussion, use `/clone` and ask “Now adapt this plan for a smaller team.”
 
-<!-- SCREENSHOT: Answer actions and the Fork from message picker -->
+![The buttons under an answer: copy, good, bad and fork](../../assets/screenshots/answer-actions.png)
 
 ## Copy or discuss an answer
 

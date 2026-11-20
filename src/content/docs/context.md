@@ -15,7 +15,7 @@ Before you start, open a chat and send a message. The ring is hidden until usage
 3. Select **Compact context**. Rath replaces earlier messages in the context with a summary. The full conversation history is kept, but the summary can leave out details, so repeat anything that must be exact in your next message.
 4. Look for **Conversation compacted** in the conversation. The row may show token counts and a **Working state** section. The ring may still show its previous fill immediately afterwards; its hover says **Compacted — usage updates after your next message**, or gives a token figure. Send your next message and check the ring again after Rath responds.
 
-<!-- SCREENSHOT: Plus menu showing Compact context -->
+![The plus menu above the message box: attach, context, compact and export](../../assets/screenshots/composer-menu.png)
 
 For example, after a long document review, compact and say: “Continue the review. Keep the recommendation that the deadline is 30 June.” For a long planning conversation, try: “Summarize the remaining decisions and use the £5,000 budget we agreed.” Check Rath's response against the details you need; a summary is not a word-for-word copy.
 

@@ -17,7 +17,7 @@ After Rath edits your work, review what changed before relying on it. You can ke
 
 You should see the comparison open for the selected file or files. An older response's comparison can include later changes to the same file, because it compares against the current content. Read it with that in mind.
 
-<!-- SCREENSHOT: A change review with the revert action visible -->
+![An answer followed by the Edited card with Review and Undo](../../assets/screenshots/change-review.png)
 
 ## Undo a response or a session
 
