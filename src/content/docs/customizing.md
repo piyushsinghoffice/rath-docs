@@ -36,3 +36,5 @@ For example, turn off **Task checklist** when you want more space for a long con
 - If you see **Your organization has turned customizations off.**, an organization setting is limiting them; ask your administrator for help. Notices for every restricted state are still being verified, so a missing notice does not establish that customization is available.
 
 See [Chatting](/rath-docs/chatting/), [Permissions](/rath-docs/permissions/), and [Rath Features settings](/rath-docs/settings-features/) for more controls.
+
+See [Changing how Rath looks](/rath-docs/appearance-and-themes/) for themes, styles, and appearance setting approvals.
