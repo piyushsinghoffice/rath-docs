@@ -15,7 +15,7 @@ Before you start, open a Git project with changes in **Source Control**. You als
 3. The generated text appears in the message box. Read it against the changes you intend to commit, correct anything misleading, and add any issue reference or other details your team needs.
 4. When the message and selected changes are ready, select **Commit**. Generating the message alone does not create a commit.
 
-<!-- SCREENSHOT: Source Control message box with Generate Commit Message button -->
+![The Source Control message box with the sparkle button that generates a commit message](../../assets/screenshots/commit-message.png)
 
 If there are staged changes, Rath describes those. If nothing is staged, it uses the available changes to previously tracked files instead; new untracked files are not included in that fallback. Stage a new file if it needs to be described. A very large set of changes can be shortened before it reaches the model, so check the draft for omissions. Generating again replaces the text in the message box when a nonempty answer arrives, so keep any wording you want first.
 

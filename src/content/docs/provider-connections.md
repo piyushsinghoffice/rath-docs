@@ -28,7 +28,7 @@ When the connection and model are usable, Rath can answer in the chat. The avail
 3. At **Set Rath API Key**, enter the key. Rath stores it encrypted in its secret storage.
 4. Select a model for that provider in your chat and try a request, such as “Explain this document in plain language.”
 
-<!-- SCREENSHOT: Provider sign-in choice and API key prompt -->
+![The sign-in choice: Use a subscription or Use an API key](../../assets/screenshots/provider-signin.png)
 
 To replace a key, run the same command again for that provider. To remove one, choose **Rath: Clear Provider API Key…** and select the configured provider. To disconnect a subscription, open a chat and choose **Rath: Sign Out of a Subscription…**, then select the account. Rath displays **Signed out of {provider}.** A subscription and an API key are separate connections; removing one does not remove the other.
 

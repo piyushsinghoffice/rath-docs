@@ -20,7 +20,7 @@ Before you start, open the project folder and obtain the server's starting comma
 
 When a server connects and provides tools, its tools can appear in **MCP Tools**. Their presence shows they were registered; it does not guarantee that a particular request will succeed or that Rath will choose to use one. The first response can take longer while servers connect.
 
-<!-- SCREENSHOT: MCP Tools in Manage Tools with a connected server's tools -->
+![The MCP Tools group in Manage Tools, listing a connected server's tool](../../assets/screenshots/mcp-tools.png)
 
 ## Turn access on or off
 

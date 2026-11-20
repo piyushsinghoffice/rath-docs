@@ -15,7 +15,7 @@ Before you start, open the folder associated with the conversation. For an expor
 3. Look at the preview and its label: **You** identifies your message and **Rath** an answer. A result can also identify thinking, a tool call, or a tool result. A date and time appear when available.
 4. Select a result to open its chat. Rath attempts to move to the matching text when it is displayed in the conversation. If an older message has not been drawn yet, the chat still opens, but you may need to find the message yourself.
 
-<!-- SCREENSHOT: Message history search results -->
+![Message history search results for the word orders](../../assets/screenshots/message-history-search.png)
 
 For another example, search `renewal deadline` to return to a chat where you asked, “Summarize the renewal deadline and next steps.” Change the words if the first search does not lead you to the right conversation. Search can return up to 50 results, and a result may be relevant even if it does not contain the exact words you typed. To filter by chat title instead, use **Search chats** in the chat list; see [Chats and sessions](/rath-docs/sessions/).
 

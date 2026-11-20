@@ -19,7 +19,7 @@ To open the Command Palette, press Command+Shift+P on a Mac or Ctrl+Shift+P else
 
 You can use `$1` for the first word after the command and `$2` for the second; put a multiword value in quotes to treat it as one. For example, `Compare $1 with $2 in a table` works with `/compare "first draft" "second draft"` if you created a prompt named `compare`. Type `/` at the start of the message box to see available suggestions; inserting a suggestion does not send it.
 
-<!-- SCREENSHOT: Creating a prompt and choosing where to save it -->
+![The first step of creating a prompt: naming the slash command](../../assets/screenshots/new-prompt.png)
 
 ## Make a skill
 

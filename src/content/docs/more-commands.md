@@ -16,7 +16,7 @@ Before you start, open a Rath chat for the focus command, and open the folder as
 
 For example, hide the sidebar when you need more room to read, then show it again to find a conversation. After reading another document, use the focus command and ask: “What should I check next?”
 
-<!-- SCREENSHOT: Rath sessions sidebar and the focused chat message box -->
+![The Rath chat list on the right and the message box in an open chat](../../assets/screenshots/sessions-sidebar.png)
 
 ## Inspect recorded activity
 

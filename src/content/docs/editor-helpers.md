@@ -24,7 +24,7 @@ Open your project and connect a model for Rath. Open the relevant content in the
 
 For example, select an unfamiliar calculation and choose **Explain**, then ask “Can you explain that with a small example?” Select a section with an error and choose **Fix**, then ask “What caused the problem?” For a function that needs checks, choose **Generate Tests** and follow up with “Which edge cases did you cover?”
 
-<!-- SCREENSHOT: Editor Rath menu showing Explain, Fix, Generate Tests and Add Documentation -->
+![The Rath submenu in the editor's right-click menu](../../assets/screenshots/editor-menu.png)
 
 ## Request a specific edit
 

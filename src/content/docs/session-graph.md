@@ -34,7 +34,7 @@ Records have limits. Edits made through terminal commands or outside Rath are no
 3. Read the preview and origin. **You** marks your message, **Rath** an answer, and **Tool result (error)** a recorded failure. A date and time appear when available.
 4. Select a result to open its chat. Rath tries to move to matching visible message text. A thinking or tool result opens the chat without moving to its raw text; older messages may need to be found manually.
 
-<!-- SCREENSHOT: Message history search with matching chat results -->
+![Message history search results for the word orders](../../assets/screenshots/message-history-search.png)
 
 ## If it doesn't work
 

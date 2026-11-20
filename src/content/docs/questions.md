@@ -18,7 +18,7 @@ Before you start, open a Rath chat and send a request. A question appears above 
 4. Select **Submit** for a choice, or send your typed answer. Selecting a choice alone does not submit it.
 5. If you see **Question 1 of 2** or another count, use **Next** to move through the questions. Use **Previous** or the question tabs to revisit an answer before selecting **Submit** on the last question.
 
-<!-- SCREENSHOT: A question in the conversation with answer choices -->
+![A question card with three choices, Other and Submit](../../assets/screenshots/question-card.png)
 
 When your answer is submitted, the question controls close and Rath can continue. In the conversation, an answered choice question can show the offered choices with your selection marked. Check the subsequent response to see how Rath used your answer.
 
