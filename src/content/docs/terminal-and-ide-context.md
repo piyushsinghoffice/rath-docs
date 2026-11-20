@@ -21,7 +21,7 @@ The attachment captures up to the last 150 lines of the active terminal at the t
 
 For shortcuts that start an explanation or a fix directly from the terminal, see [Help with project changes and terminal output](/rath-docs/workflow-helpers/).
 
-<!-- SCREENSHOT: Terminal output attachment in the chat composer -->
+![The message box with a Terminal output attachment chip, above the terminal it came from](../../assets/screenshots/terminal-attachment.png)
 
 ## Share an editor selection
 

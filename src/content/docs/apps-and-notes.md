@@ -19,7 +19,7 @@ Apps in chat require **Full access**. If you change the setting, start a new cha
 3. When the app appears in the chat, try its controls. Change the income and expenses and check that the result makes sense before relying on it.
 4. If it needs more room, use **Expand** in the app's header; use **Collapse** to return it to its smaller size. You can also ask for a change in the chat, such as “Add a savings percentage to this calculator.”
 
-<!-- SCREENSHOT: Interactive app in a Rath chat -->
+![An interactive order-total app shown inside a chat](../../assets/screenshots/app-in-chat.png)
 
 For another example, try: “Make a bar chart comparing 12, 18, and 25 visits for Monday, Tuesday, and Wednesday.” Or ask: “Show a simple simulation of a ball moving at different speeds, with a control for speed.” Rath may choose a different form for its answer, so describe the controls or picture you need if its first response is not useful.
 

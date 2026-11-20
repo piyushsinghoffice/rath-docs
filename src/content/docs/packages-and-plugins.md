@@ -18,7 +18,7 @@ Before you start, get a package source from a provider you trust. A source tells
 4. Under **Install for**, choose **All my projects** or **This project only (the project must be trusted)**. The latter requires an open folder. Select **Install**.
 5. Look for **Installed …** and the package under **Installed**. Select **Restart Idle Chats** to load the change in idle open chats. A chat in the middle of a response is left alone and loads the change when it restarts.
 
-<!-- SCREENSHOT: Packages review showing scope, additions and install warning -->
+![The package review: install warning, Install for choice and what the package adds](../../assets/screenshots/packages-review.png)
 
 For example, after installing a trusted package that supplies a review skill, start a new chat and ask: “Review my draft using the review skill and explain your suggestions.” The result depends on what that particular package supplies and how Rath responds; installation alone does not guarantee a particular answer.
 

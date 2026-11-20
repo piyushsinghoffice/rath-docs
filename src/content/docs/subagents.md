@@ -18,7 +18,7 @@ Each subagent makes additional model requests. Depending on your provider and pl
 4. Check the tab header for **Running**, **Completed**, **Failed**, **Queued**, or **Waiting**. It can also show the model and elapsed time. A running transcript can update as work continues. Return to the main chat tab to follow the overall answer.
 5. Read Rath's answer and check any changes before using them. A completed card tells you that the delegated run ended; it does not guarantee the result is correct. See [Reviewing and undoing changes](/rath-docs/reviewing-changes/).
 
-<!-- SCREENSHOT: Subagent activity and its status in a chat -->
+![The Subagents card in a chat with a finished task](../../assets/screenshots/subagent-card.png)
 
 When several tasks are independent, Rath can run them together. It can also arrange work in sequence, passing one result to the next. In that case **Waiting for previous subagent** means a later task has not started yet; inspect the earlier card for progress.
 

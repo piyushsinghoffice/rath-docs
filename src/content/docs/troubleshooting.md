@@ -16,7 +16,7 @@ Keep the chat open so you can read its message and copy any available details. A
 2. Match the message to a case below and follow its suggested action.
 3. If a retry succeeds, the conversation continues. Check the answer and any changed material. If it does not, keep the exact message and ask the person who provides Rath or your model provider for help, as appropriate.
 
-<!-- SCREENSHOT: A connection error and retry control -->
+![The Rath cannot connect notice with Try Again and Copy details](../../assets/screenshots/connection-error.png)
 
 ### Waiting or stopped
 
