@@ -25,11 +25,11 @@ The names below include the **Rath:** prefix shown in the palette. A dash means 
 | Rath: Quick Ask | Starts a new chat with a question. | [Quick Ask](/rath-docs/quick-ask-and-model-switching/) |
 | Rath: New Chat | Opens a new chat. | [Sessions](/rath-docs/sessions/) |
 | Rath: Show Rath Sessions | Opens the sessions view. | [Sessions](/rath-docs/sessions/) |
-| Rath: Toggle Rath Sidebar | Shows or hides the Rath sidebar. | — |
-| Rath: Focus Chat Input | Moves focus to the chat message box. | — |
+| Rath: Toggle Rath Sidebar | Shows or hides the Rath sidebar. | [More Rath commands](/rath-docs/more-commands/) |
+| Rath: Focus Chat Input | Moves focus to the chat message box. | [More Rath commands](/rath-docs/more-commands/) |
 | Rath: Search Message History… | Searches messages across chats in the open folder. | [History and export](/rath-docs/history-and-export/) |
 | Rath: Export Chat to HTML | Saves the active chat as a web page. | [History and export](/rath-docs/history-and-export/) |
-| Rath: Open Knowledge Graph | Opens the graph of session relationships. | — |
+| Rath: Open Knowledge Graph | Opens the graph of session relationships. | [More Rath commands](/rath-docs/more-commands/) |
 | Rath: Tap or Hold to Record | Starts or stops dictation in the message box. | [Dictation](/rath-docs/dictation/) |
 | Rath: Open Debug View for This Chat | Opens diagnostic details for the active chat when enabled. | — |
 | Rath: Show Automation Action Log | Opens recorded automation action decisions. | [Automations](/rath-docs/automations/) |
@@ -45,7 +45,7 @@ The names below include the **Rath:** prefix shown in the palette. A dash means 
 | Rath: Clear Provider API Key… | Removes a saved provider key. | [Provider connections](/rath-docs/provider-connections/) |
 | Rath: Sign Out of a Subscription… | Disconnects a subscription. | [Provider connections](/rath-docs/provider-connections/) |
 | Rath: Choose Default Model… | Chooses the starting model for new chats. | [Models](/rath-docs/models/) |
-| Rath: Choose Prompt Suggestion Model | Chooses a model for suggestions while typing a message. | — |
+| Rath: Choose Prompt Suggestion Model | Chooses a model for suggestions while typing a message. | [More Rath commands](/rath-docs/more-commands/) |
 | Rath: Switch to Next Model | Selects the next available model in the active chat. | [Model switching](/rath-docs/quick-ask-and-model-switching/) |
 | Rath: Switch to Previous Model | Selects the previous available model in the active chat. | [Model switching](/rath-docs/quick-ask-and-model-switching/) |
 | Rath: Choose Inline Completion Model | Chooses a model for suggestions in the editor. | [Inline completions](/rath-docs/inline-completions/) |
@@ -74,22 +74,22 @@ The names below include the **Rath:** prefix shown in the palette. A dash means 
 | --- | --- | --- |
 | Rath: Manage Tools… | Opens the tools screen. | [Tools screen](/rath-docs/tools-screen/) |
 | Rath: Manage Packages… | Opens the packages screen. | [Packages and plugins](/rath-docs/packages-and-plugins/) |
-| Rath: New Prompt (Slash Command) | Creates a reusable prompt. | — |
-| Rath: New Skill | Creates a reusable skill. | — |
-| Rath: Open Project Instructions (AGENTS.md) | Opens project instructions for Rath. | — |
+| Rath: New Prompt (Slash Command) | Creates a reusable prompt. | [Prompts, skills, and project instructions](/rath-docs/prompts-skills-and-instructions/) |
+| Rath: New Skill | Creates a reusable skill. | [Prompts, skills, and project instructions](/rath-docs/prompts-skills-and-instructions/) |
+| Rath: Open Project Instructions (AGENTS.md) | Opens project instructions for Rath. | [Prompts, skills, and project instructions](/rath-docs/prompts-skills-and-instructions/) |
 | Rath: Add MCP Server | Adds a connection to a service offering tools. | [MCP servers](/rath-docs/mcp-servers/) |
 | Rath: Show What My Organization Restricts | Reports restrictions set by your organization. | [Organisation policy](/rath-docs/organisation-policy/) |
 | Rath: Undo the Agent's Last Setting Change | Reverses the latest setting change made by Rath. | [Appearance and themes](/rath-docs/appearance-and-themes/) |
 | Rath: Show Hidden Composer Widgets | Brings back hidden additions above the message box. | [Making Rath yours](/rath-docs/customizing/) |
-| Rath: Open My Stylesheet | Opens your personal appearance rules. | — |
-| Rath: Turn Off My Stylesheets | Turns off your personal appearance rules. | — |
-| Rath: Turn On My Stylesheets | Turns your personal appearance rules back on. | — |
-| Rath: Show What My UI Loaded | Shows which personal interface additions were loaded. | — |
-| Rath: Restore an Earlier Version of My UI | Offers an earlier version of your interface changes to restore. | — |
-| Rath: Set Up Sync for My UI | Sets up synchronization of interface changes. | — |
-| Rath: Sync My UI Now | Synchronizes interface changes. | — |
-| Rath: Manage Extensions the Agent Wrote | Opens management for extensions written by Rath. | — |
-| Rath: Copy My Engine Settings to the Terminal Product | Copies engine settings for use in the terminal product. | — |
+| Rath: Open My Stylesheet | Opens your personal appearance rules. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
+| Rath: Turn Off My Stylesheets | Turns off your personal appearance rules. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
+| Rath: Turn On My Stylesheets | Turns your personal appearance rules back on. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
+| Rath: Show What My UI Loaded | Shows which personal interface additions were loaded. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
+| Rath: Restore an Earlier Version of My UI | Offers an earlier version of your interface changes to restore. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
+| Rath: Set Up Sync for My UI | Sets up synchronization of interface changes. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
+| Rath: Sync My UI Now | Synchronizes interface changes. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
+| Rath: Manage Extensions the Agent Wrote | Opens management for extensions written by Rath. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
+| Rath: Copy My Engine Settings to the Terminal Product | Copies engine settings for use in the terminal product. | [More Rath commands](/rath-docs/more-commands/) |
 
 ## If it doesn't work
 
