@@ -20,7 +20,8 @@ For example, send `/access`, select **Read-only**, then ask: “Summarize the pr
 
 ## Choose settings and material
 
-- `/access` opens the tool-access choices. `/access read-only` selects **Read-only** directly; Rath reports **Tool access set to Read-only.**
+- `/access` opens the tool-access choices: **Full access**, **Read-only**, **Ask before changes**, **Plan**, and **No tools**. You can select them directly with `/access full`, `/access read-only`, `/access ask`, `/access plan`, or `/access no-tools`. When a change succeeds, Rath reports, for example, **Tool access set to Read-only.** See [Permissions](/rath-docs/permissions/) before choosing.
+- `/attach` opens a file picker so you can add material to your next message. For example, attach a proposal and ask: “Summarize the main decisions in this document.”
 - `/model` opens the model selector. You can follow it with an available model's exact name to select it directly.
 - `/thinking` opens **Reasoning effort**; `/thinking high` selects **High thinking** when that level is available for the model.
 - `/ide-context` toggles whether the active editor's file and selection are included with the next message. Use `/ide-context on` or `/ide-context off` to set it explicitly. Rath reports whether it will be included.
@@ -33,11 +34,13 @@ For example, send `/access`, select **Read-only**, then ask: “Summarize the pr
 - `/session` shows available usage information, such as context used and cost.
 - `/fork` offers **Fork from…** so you can choose an earlier message as the starting point of a new conversation. `/clone` duplicates the conversation at its current position. See [Sessions](/rath-docs/sessions/).
 - `/copy` copies the last Rath message and reports **Copied to clipboard.** For example, ask “Draft a short project update,” then send `/copy` and paste the answer into your notes.
-- `/export` opens the save flow for an HTML copy of the chat. `/quit` closes the chat tab. See [History and export](/rath-docs/history-and-export/).
+- `/export` opens the save flow for an HTML copy of the chat. `/quit` closes the chat tab; if Rath is answering, closing the last tab for that chat interrupts the answer. See [History and export](/rath-docs/history-and-export/).
 
 ## Open controls
 
-`/login` opens provider sign-in; `/logout` opens the provider sign-out flow. `/settings` opens Rath settings, `/hotkeys` opens keyboard shortcuts, and `/trust` opens workspace trust controls. Workspace trust controls whether features that can run code are allowed in a folder; review the choices before changing them. See [Provider connections](/rath-docs/provider-connections/).
+`/login` opens provider sign-in; `/logout` opens the provider sign-out flow. `/settings` opens Rath settings, `/hotkeys` opens keyboard shortcuts, and `/trust` opens workspace trust controls. See [Provider connections](/rath-docs/provider-connections/).
+
+`/customize` starts a request to change Rath's appearance, or offers to turn on Agent Customization first. After changing extensions, prompts, or skills, wait for Rath to finish answering and send `/reload` to reconnect the current chat. Rath reports **Reconnected — extensions, prompts, and skills reloaded.**
 
 Additional suggestions can come from installed extensions, prompts, or skills. Their names and effects depend on what is available in your setup; read the description shown in the list before using one.
 

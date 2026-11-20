@@ -4,9 +4,9 @@ description: "Find Rath commands and their guides, including Early features."
 lastVerifiedVersion: "1.139.0"
 ---
 
-*Early: some appearance, automation and extension commands cover features still being checked across setups.*
+Use the Command Palette to start a Rath action by name, from opening a chat to asking for help with selected text. Use the linked guides for more detail.
 
-Use the Command Palette to find an action by name, start it, and then follow the linked guide for its choices and results. The palette is a searchable list of actions. Some commands need an open chat, a folder, a selection, or a connected provider; the guide explains the preparation.
+Before you start, connect a model provider for actions that ask Rath to work. Open the relevant folder or chat, or select text in the editor, if the action needs it.
 
 1. Press Command+Shift+P on a Mac or Ctrl+Shift+P elsewhere to open the **Command Palette**.
 2. Type a command name from the table, such as **Rath: Quick Ask**, and select the matching result.
@@ -16,7 +16,7 @@ For example, choose **Rath: Quick Ask** and type “Summarize this project in fi
 
 ![The Command Palette filtered to Rath commands](../../assets/screenshots/command-palette.png)
 
-The names below include the **Rath:** prefix shown in the palette. A dash means there is no existing guide for that particular command. Some commands appear only in a particular window or when their conditions are met.
+The names below include the **Rath:** prefix shown in the palette. Some commands appear only in a particular window or when their conditions are met. A dash means there is no linked guide for that command.
 
 ## Chats and work
 
@@ -30,8 +30,8 @@ The names below include the **Rath:** prefix shown in the palette. A dash means 
 | Rath: Search Message History… | Searches messages across chats in the open folder. | [History and export](/rath-docs/history-and-export/) |
 | Rath: Export Chat to HTML | Saves the active chat as a web page. | [History and export](/rath-docs/history-and-export/) |
 | Rath: Open Knowledge Graph | Opens the graph of session relationships. | [More Rath commands](/rath-docs/more-commands/) |
-| Rath: Tap or Hold to Record | Starts or stops dictation in the message box. | [Dictation](/rath-docs/dictation/) |
-| Rath: Open Debug View for This Chat | Opens diagnostic details for the active chat when enabled. | — |
+| Rath: Tap or Hold to Record | Starts or stops dictation when the chat message box is active. | [Dictation](/rath-docs/dictation/) |
+| Rath: Open Debug View for This Chat | Opens diagnostic details for the active chat. First enable `rath.agent.debugView` in Settings; it is off by default. | — |
 | Rath: Show Automation Action Log | Opens recorded automation action decisions. | [Automations](/rath-docs/automations/) |
 | Rath: Show Automation Result | Opens the latest saved automation result. | [Automations](/rath-docs/automations/) |
 
@@ -57,10 +57,10 @@ The names below include the **Rath:** prefix shown in the palette. A dash means 
 | Command | What it does | Guide |
 | --- | --- | --- |
 | Rath: Ask Rath to Edit Selection | Opens a request for an edit to selected text. | [Editor helpers](/rath-docs/editor-helpers/) |
-| Rath: Explain | Asks Rath to explain the selection or active file. | [Editor helpers](/rath-docs/editor-helpers/) |
-| Rath: Fix | Asks Rath to fix the selection or active file. | [Editor helpers](/rath-docs/editor-helpers/) |
-| Rath: Generate Tests | Asks Rath to write tests for the selection or active file. | [Editor helpers](/rath-docs/editor-helpers/) |
-| Rath: Add Documentation | Asks Rath to document the selection or active file. | [Editor helpers](/rath-docs/editor-helpers/) |
+| Rath: Explain | Explains selected text in the active editor, or the current line if nothing is selected. | [Editor helpers](/rath-docs/editor-helpers/) |
+| Rath: Fix | Asks Rath to fix selected text, or the current line if nothing is selected. | [Editor helpers](/rath-docs/editor-helpers/) |
+| Rath: Generate Tests | Asks Rath to write tests for selected text, or the current line if nothing is selected. | [Editor helpers](/rath-docs/editor-helpers/) |
+| Rath: Add Documentation | Asks Rath to document selected text, or the current line if nothing is selected. | [Editor helpers](/rath-docs/editor-helpers/) |
 | Rath: Resolve Merge Conflicts | Asks Rath to reconcile conflicting changes. | [Workflow helpers](/rath-docs/workflow-helpers/) |
 | Rath: Fix Failing Tests | Asks Rath to investigate and fix test failures. | [Workflow helpers](/rath-docs/workflow-helpers/) |
 | Rath: Write Pull Request Description | Asks Rath to draft a description of the changes for review. | [Workflow helpers](/rath-docs/workflow-helpers/) |
@@ -89,9 +89,11 @@ The names below include the **Rath:** prefix shown in the palette. A dash means 
 | Rath: Set Up Sync for My UI | Sets up synchronization of interface changes. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
 | Rath: Sync My UI Now | Synchronizes interface changes. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
 | Rath: Manage Extensions the Agent Wrote | Opens management for extensions written by Rath. | [My stylesheets and UI sync](/rath-docs/my-ui-stylesheets-and-sync/) |
-| Rath: Copy My Engine Settings to the Terminal Product | Copies engine settings for use in the terminal product. | [More Rath commands](/rath-docs/more-commands/) |
+| Rath: Copy My Engine Settings to the Terminal Product | Copies supported settings you have changed for use when running Rath in a terminal, after you confirm. | [More Rath commands](/rath-docs/more-commands/) |
 
 ## If it doesn't work
+
+- If a command is missing, check its conditions in the table. For dictation, focus the chat message box; for the debug view, enable `rath.agent.debugView` in Settings.
 
 - If model switching says **Open a Rath chat first.**, open the chat you want to change. **More than one model is needed to switch models.** means you need another available model; see [Models](/rath-docs/models/).
 - If history search says **Open a folder first — message history is scoped per workspace.**, open the folder containing the chat and try again. A deleted chat can produce **That chat could not be found any more. It may have been deleted.**

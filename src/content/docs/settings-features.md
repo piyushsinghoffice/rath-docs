@@ -1,27 +1,58 @@
 ---
 title: "Rath Features settings"
-description: "Choose what Rath can display, remember and change. Early."
+description: "Choose what Rath can display, remember and change."
 lastVerifiedVersion: "1.139.0"
 ---
 
-> Early: Some display and appearance features are still being verified.
+Use Rath Features to choose what appears in chat, whether Rath saves useful notes, and whether it can connect project services. You can also adjust command safety and notifications in Settings.
 
-In **AI > Rath Features**, use the plain-language switches below. On/off controls accept either value. Several require **Full access** and a new chat; enabling a switch alone does not change the chat's permissions.
+## Before you start
 
-| Setting | What it changes and when to use it | Default and allowed values |
+Open your project and decide which [permission mode](/rath-docs/permissions/) the chat needs. A feature switch does not change the chat's permissions. Connected services can run programs on your computer; enable them only when you intend to use them.
+
+## Choose features
+
+1. Open the Command Palette with **Ctrl+Shift+P** (Windows or Linux) or **Cmd+Shift+P** (Mac).
+2. Choose **Preferences: Open Settings (UI)**, then select **AI > Rath Features**.
+3. Change a switch or choose an appearance level. The page shows the current choice and explains its effect.
+4. For features requiring a new chat, start one with **Rath: New Chat** and choose **Full access**. Then send your request.
+
+| Feature | What to expect | Default |
 | --- | --- | --- |
-| Apps in chat | Allows small interactive apps such as charts. Use when you want an interactive result; adds text to every request. | On; on or off |
-| Cards in chat | Allows cards with text, progress, tables and buttons. Adds text to every request. | Off; on or off |
-| Interfaces in chat | Allows forms and other controls in chat. Adds text to every request. | Off; on or off |
-| Notifications | Allows plugins and packages to show notifications. Turn it off for fewer interruptions. | On; on or off |
-| Task checklist | Shows the checklist during a plan. Turn it off for a simpler chat. | On; on or off |
-| Agent changes to appearance | Controls how far Rath may customize its appearance. **Lean** allows your own appearance additions; **Full** also allows appearance settings and extension management with approval. | **Lean**; **Off**, **Lean**, **Full** |
-| Your styles and additions | Loads your own appearance additions. Turn it off if they interfere with use. | On; on or off |
-| Scripted components | Allows custom chat components to run scripts in an isolated area. | Off; on or off |
-| Find abilities when needed | Loads descriptions of rarely used tools only when needed. | On; on or off |
-| Save useful notes | Saves lasting project notes after a long turn, with an extra AI request. | Off; on or off |
-| Connect services | Allows configured project services to supply tools; those services can run programs on your computer. | Off; on or off |
+| **Apps in chat** | Interactive displays such as charts and calculators. Their code runs in an isolated area. | On |
+| **Cards in chat** | Cards with text, progress, tables and buttons. | Off |
+| **Interfaces in chat** | Forms and controls you can answer by clicking. | Off |
+| **Notifications** | Notifications from plugins and packages. | On |
+| **Task checklist** | A checklist above the chat box when Rath works through a plan. | On |
+| **Agent changes to appearance** | **Off** prevents changes. **Lean** lets Rath create your own appearance additions. **Full** also lets it change appearance settings and manage extensions, asking first. | Lean |
+| **Your styles and additions** | Loads your own appearance additions. | On |
+| **Scripted components** | Lets custom chat components run scripts in an isolated area without network access. | Off |
+| **Find abilities when needed** | Lets Rath find rarely used abilities when needed. | On |
+| **Save useful notes** | Saves lasting project notes after a long chat turn; each run uses an extra AI request. | Off |
+| **Connect services** | Enables tools from configured project services. | Off |
 
-**Apps in chat**, **Cards in chat**, **Interfaces in chat**, **Find abilities when needed** and **Save useful notes** require full access and apply to new chats. **Agent changes to appearance** requires full access; its extra Full abilities apply to new chats. **Connect services** requires full access.
+**Apps in chat**, **Cards in chat**, **Interfaces in chat**, **Find abilities when needed** and **Save useful notes** need **Full access** and a new chat. Finding abilities on demand applies only to new Full access chats, and does not apply in other modes. **Connect services** also needs Full access and a new chat after configuration changes. Appearance changes need Full access; the extra abilities in **Full** apply to new chats.
 
-For example, leave **Task checklist** on for a complicated plan, or turn on **Save useful notes** for recurring project decisions. If a display does not appear, check the switch, permission mode and whether the chat was started after the change. See [Apps and notes](/rath-docs/apps-and-notes/) and [Permissions](/rath-docs/permissions/).
+Apps, cards and interfaces add text to every request. Appearance's **Lean** adds about 200 tokens and **Full** about 400 tokens to each message Rath reads; tokens are small pieces of text.
+
+Try these requests in a new Full access chat:
+
+- With **Apps in chat** on: “Make an interactive chart of these monthly sales.” Provide the sales figures in your message.
+- With **Task checklist** on: “Plan the steps to organize this project and show me the checklist.”
+- With **Save useful notes** on: “Help me work through this project's recurring decisions.” After a long turn, Rath can save lasting notes for later chats.
+
+## More controls in Settings
+
+Use the Settings search box to find these controls by their descriptive text:
+
+- Search **run shell commands that only look**. This is on by default: in **Ask before changes**, look-only commands run without asking. Turn it off to ask for those commands too.
+- Search **Run the agent's shell commands in a sandbox**. The default is `off`. On macOS, `files` limits where commands can write; `files-and-network` also blocks their network access. Neither limits reads or other file edits. On other systems, commands are refused while it is on. Start a new chat after changing it.
+- Search **check the files it changed for errors** to control the on-by-default instruction to check and fix introduced errors in new chats.
+- Search **rail of dots beside a chat**, **short status labels**, or **a few lines of text** to control the prompt timeline, status labels and widgets. All are on by default.
+- Search **chat you are not looking at finishes** to control the separate background-chat notification, on by default.
+
+## If it doesn't work
+
+If a display or connected service is missing, check its switch, select **Full access**, and start a new chat. For a connected service, ask Rath to check the connection; it can report which services connected and why one failed. See [Apps and notes](/rath-docs/apps-and-notes/) and [Permissions](/rath-docs/permissions/) for more help.
+
+If a command fails and Rath reports that the shell sandbox needs macOS, use a Mac for sandboxed commands or turn the sandbox off to run them without that protection.

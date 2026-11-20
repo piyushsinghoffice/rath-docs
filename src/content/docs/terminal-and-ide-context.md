@@ -8,16 +8,16 @@ Give Rath a snapshot of a terminal result, a passage open in your editor, or a p
 
 ## Before you start
 
-Open a Rath chat with a connected provider. A terminal is a window where commands run and print results; an editor is where you view and change text or code. Open the terminal, editor, or picture relevant to your question. The plus button beside the message box is called **Attach, context, and session actions**.
+Open a Rath chat with a connected provider. A terminal is a window where commands run and print results; an editor is where you view and change text or code. Open the terminal, editor, or picture relevant to your question. When you send, the material is shared with your selected provider. The plus button beside the message box is called **Attach, context, and session actions**.
 
 ## Share terminal output
 
-1. Select the terminal containing the result you want Rath to see.
+1. If you have more than one terminal, select the terminal containing the result you want Rath to see in the terminal list. Check its output for private information.
 2. In the chat, select **Attach, context, and session actions**, then **Attach terminal output**.
 3. A **Terminal output.txt** attachment appears by the message box. Select it to inspect the captured text; use **Remove** if it is the wrong output.
 4. Type your question and select **Send**. Your message and attachment appear in the conversation, and Rath can respond to the captured output.
 
-The attachment contains up to the last 150 lines of the active terminal at the time you attach it. If the relevant result is older, bring it into those lines or share a suitable text extract. For example, ask: “Explain this error in plain language and suggest what I should check first.” If the terminal output changes afterwards, attach it again to share the newer result.
+The attachment captures up to the last 150 lines of the active terminal at the time you attach it. When sent, its text is limited to 6,000 characters, so a long capture can be shortened. Inspect the attachment before sending to check that you selected the intended terminal and that it contains no secrets. If the relevant result is older or too long, share a suitable text extract instead. For example, ask: “Explain this error in plain language and suggest what I should check first.” If the terminal output changes afterwards, attach it again to share the newer result.
 
 For shortcuts that start an explanation or a fix directly from the terminal, see [Help with project changes and terminal output](/rath-docs/workflow-helpers/).
 
@@ -30,7 +30,7 @@ For shortcuts that start an explanation or a fix directly from the terminal, see
 3. Type a request such as “Explain the selected passage to someone new to this project” and select **Send**. Rath receives the active editor's selection with your question.
 4. To stop including editor context in later messages, open the plus menu and select **IDE context** again; the check mark disappears.
 
-Rath gathers the active editor context when you send. It includes the active file, its language, and the selected text; if nothing is selected, it uses visible text instead. It can also include reported issues for that file. Long text can be shortened, so select the most relevant passage and check the answer against the original. If you switch editors before sending, check which editor and selection are active.
+Rath gathers editor context when you send, even though it is not shown in your message bubble. It includes the active file's name and location, its language, and the selected text. If there is no selection, it uses visible text instead. It also includes up to 20 reported issues for that file, if there are any. The selected or visible text is limited to 6,000 characters; longer text is shortened. Select the most relevant passage, check it and the file's reported issues for private information, and check the answer against the original. If you switch editors before sending, check which editor and selection are active.
 
 ## Share a picture
 

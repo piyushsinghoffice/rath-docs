@@ -1,19 +1,19 @@
 ---
-title: "Chats and sessions"
+title: "Sessions and history"
 description: "Start separate chats, return to earlier work, and keep track of activity."
 lastVerifiedVersion: "1.139.0"
 ---
 
-Use separate chats to keep different tasks easy to find. A session is one conversation with Rath: you can return to its earlier messages, give it a useful name, or remove it when you no longer need it.
+Use separate chats to keep different tasks easy to find. You can return to earlier messages, give each chat a useful name, or remove it when you no longer need it.
 
-Before you start, open the folder you want to work in and find the Rath chat list. Previous chats in the list belong to the current workspace. To send a message, you also need a working model connection; see [Getting started](/rath-docs/getting-started/).
+Before you start, open the folder you want to work in. Select **Toggle Rath Sidebar** in the top bar to show the chat list. Previous chats in the list belong to the current workspace. To send a message, you also need a working model connection; see [Getting started](/rath-docs/getting-started/).
 
 ## Start and switch between chats
 
-1. In the chat list, select **New chat**. A conversation opens in a tab.
+1. In the chat list, select **New chat**. A chat opens in a tab.
 2. Type your request and send it. For example: “Summarize the documents in this folder in plain language.”
 3. For a different task, select **New chat** again. For example, ask: “Suggest a checklist for reviewing these documents.”
-4. Select either chat's tab or its row in the list to return to it. Each conversation has its own messages; you can have more than one chat working at a time.
+4. Select either chat's tab or its row in the list to return to it. Each chat has its own messages; you can have more than one chat working at a time.
 
 For a quick question, choose **Rath: Quick Ask** from the Command Palette or **Quick Ask** from the chat list menu. Type your question and press Enter to start a new chat with that question. Press Escape to cancel.
 
@@ -29,7 +29,7 @@ Open chats appear above previous chats in the list. A small bar at the left of a
 
 ## Close or delete
 
-To finish with an open chat for now, close its tab or select **Close** beside its row. Closing the last tab ends that open session; a saved conversation can be opened again from the list. Closing a chat while it is working ends that session, so wait for the result if you need it.
+To finish with an open chat for now, close its tab or select **Close** beside its row. Closing the last tab stops that chat, including any response still in progress. Wait for the result before closing if you need it. You can reopen a saved chat from the list; changes already made to your files are not undone by closing it.
 
 To permanently remove a saved chat:
 
@@ -39,7 +39,7 @@ To permanently remove a saved chat:
 
 ## Notice work in another chat
 
-When a chat finishes a response while you are looking elsewhere, a dot appears after its title in the list. Select the chat to see the result and clear the marker. By default, Rath also shows a notification saying **"…" has finished.** Select **Go to Session** in the notification to open that chat. If a background chat is waiting for your input, its row can also gain a dot and a notification offers **Go to Session**.
+When a chat finishes a response while you are looking elsewhere, a dot appears after its title in the list. Select the chat to see the result and clear the marker. Rath also shows a notification saying **"…" has finished.** This completion notification is on by default and can be turned off in Settings; see [Notifications](/rath-docs/notifications/). Select **Go to Session** in the notification to open that chat. If a background chat is waiting for your input, its row can also gain a dot and a notification offers **Go to Session**.
 
 ## If it doesn't work
 

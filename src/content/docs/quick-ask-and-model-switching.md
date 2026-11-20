@@ -1,14 +1,14 @@
 ---
 title: "Quick Ask and model switching"
-description: "Early: start a fresh question quickly and move between available models."
+description: "Start a fresh question quickly and move between available models."
 lastVerifiedVersion: "1.139.0"
 ---
 
-> Early: These commands are new and have not yet been verified in a Rath window.
-
 Use **Quick Ask** when a question deserves its own conversation: type a short request and Rath opens a new chat with that request already sent. Use the model-switching commands when you want to move through the models available to an open chat without opening the model list.
 
-Before you start, connect a model provider, the service that supplies Rath's models. To switch models, have at least two available and open the Rath chat you want to change. See [Getting started](/rath-docs/getting-started/) and [Models and thinking level](/rath-docs/models/). The Command Palette is the searchable list of commands you can open with Command+Shift+P on a Mac or Ctrl+Shift+P elsewhere.
+Before you start, open your project folder and connect a model provider, the service that supplies Rath’s models. To switch models, have at least two available and open the Rath chat you want to change. See [Getting started](/rath-docs/getting-started/) and [Models and thinking level](/rath-docs/models/). The Command Palette is the searchable list of commands you can open with Command+Shift+P on a Mac or Ctrl+Shift+P elsewhere.
+
+Quick Ask starts a new chat in **Full access** and sends your request immediately. In this mode Rath can make changes and run commands without asking first. If you want to choose a more restrictive permission mode before sending a request, start a regular new chat instead and select its mode first. See [Permissions](/rath-docs/permissions/).
 
 ## Start a separate question
 
@@ -19,8 +19,6 @@ Before you start, connect a model provider, the service that supplies Rath's mod
 For another fresh conversation, try **Rath: Quick Ask** again with “Explain the main purpose of this project in plain language.” Each non-empty request starts a new chat; it does not add the question to the conversation you were reading. Cancel the box or leave it blank if you change your mind.
 
 ![The Quick Ask box at the top of the window](../../assets/screenshots/quick-ask.png)
-
-![The new chat Quick Ask starts with your question](../../assets/screenshots/quick-ask-result.png)
 
 ## Move between models
 

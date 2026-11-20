@@ -20,11 +20,13 @@ On macOS:
 2. Choose **Shell Command: Install 'rath' and 'rath-agent' Commands in PATH**. If asked, authorize the installation.
 3. Look for **Shell commands 'rath' and 'rath-agent' successfully installed in PATH. Run 'rath agent' or 'rath-agent' in a terminal to use the Rath agent.** Open a new terminal and enter `rath agent --help` to see the available options.
 
-On Windows, the Rath installer adds the commands to your command search path. Open a new terminal and try `rath agent --help`. On Linux, command availability depends on how Rath was installed; try the same help command.
+On Windows, leave **Add to PATH (requires shell restart)** ticked in the installer. Open a new terminal and try `rath agent --help`. On Linux, try the same command. If it is not found, reinstall Rath using your usual installation method or ask your administrator to make the Rath command available in your terminal.
 
 ## Start a conversation
 
-1. In your terminal, enter `rath agent` and press Enter. `rath-agent` starts the same terminal agent.
+By default, the terminal chat has full access: Rath can read and change files and run commands. A request to avoid changes is an instruction, not a restriction. For an inspection with only reading and search tools, start with `rath agent --tools read,grep,find,ls` instead.
+
+1. In your terminal, enter `rath agent` and press Enter, or use the inspection command above. `rath-agent` starts the same terminal chat.
 2. Type a request such as “Summarize the documents in this folder without changing them” and press Enter.
 3. Read Rath's response in the terminal, then type a follow-up such as “Turn that summary into a short checklist.”
 4. When finished, type `/quit` and press Enter.
@@ -41,14 +43,14 @@ For the most recent conversation, use `rath agent --continue`. Inside an interac
 
 ## What to know
 
-The terminal launcher defaults to full access: Rath can use tools that read and change files or run commands. Be specific when you want it only to inspect something, and review its work. The terminal agent loads available bundled tools except those intended only for the Rath window, so the two experiences do not have identical features. The packaged command and the complete cross-surface resume experience have not been checked in a live Rath window for this guide.
+The terminal chat and Rath's window do not have identical features. You can set the `RATH_PERMISSION_MODE` environment variable before starting a terminal chat to control access for bundled features: `full`, `readOnly`, or `noTools`. This variable alone does not restrict the built-in tools; use `--tools` as shown above to restrict the tools available to the chat. Review Rath's work before relying on it.
 
 ## If it doesn't work
 
 - If the terminal cannot find the command, check the installation step and open a new terminal. A particular Rath build may not include the terminal agent: the launcher can report **This build of Rath does not include the terminal agent.** Use a build that includes it.
 - **No sessions in current folder. Press Tab to view all.** means the current-folder list is empty. Press Tab or start from the folder where you had the conversation. **No sessions found** means the displayed search and scope found none; clear your search and check the scope.
 - **No models available** or **No API key found** indicates a connection is needed. In an interactive terminal chat, enter `/login` and follow the provider prompts, or check [Provider connections](/rath-docs/provider-connections/).
-- **rath-agent: no bundled or system Node.js runtime found.** means the required runtime is unavailable. Reinstall a complete Rath build or ask your administrator for help.
+- **rath-agent: no bundled or system Node.js runtime found.** means a component needed to start the terminal chat is missing. Reinstall Rath using your usual installation method, or ask your administrator to install Node.js or repair the Rath installation.
 
 ## Related pages
 

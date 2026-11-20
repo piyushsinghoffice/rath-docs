@@ -8,13 +8,13 @@ lastVerifiedVersion: "1.139.0"
 
 Packages can add tools, skills, prompts and themes to Rath. A plugin can also show information or controls beside a chat. Use packages when you trust a provider and want its extra capabilities; use the package list to pause or remove one you no longer need.
 
-Before you start, obtain a package source from someone you trust. For a project-only installation, open the project and trust it. A package can run code with full access to your computer, including your files and network. Review it carefully before installing.
+Before you start, get a package source from a provider you trust. A source tells Rath where to find the package: it can be an npm package name such as `npm:package-name`, a Git repository address such as `git:github.com/user/repo`, or a folder on your computer. Ask the provider for the exact source. For a project-only installation, open the project and trust it.
 
 ## Review and install
 
-1. Open the command palette and choose **Rath: Manage Packages…**. The **Packages** page opens. Under **Installed** you may see **No packages installed yet.**
+1. Open the Command Palette with **Ctrl+Shift+P** (Windows or Linux) or **Cmd+Shift+P** (Mac), and choose **Rath: Manage Packages…**. The **Packages** page opens. Under **Installed** you may see **No packages installed yet.**
 2. Enter the source supplied by the package provider in **Package source**, then select **Review Package…**. Rath reads it without installing it.
-3. On **Install …?**, check **What it adds** and **What runs when it is installed**. Dependencies can run installation scripts too. Select **Cancel** if you do not trust or understand the source.
+3. On **Install …?**, check **What it adds** and **What runs when it is installed**. A package can run code with full access to your computer: it can read and change files and use the network. Dependencies can run installation scripts too. Removing the package later does not undo what an installation script has already done. Select **Cancel** if you do not trust or understand the source.
 4. Under **Install for**, choose **All my projects** or **This project only (the project must be trusted)**. The latter requires an open folder. Select **Install**.
 5. Look for **Installed …** and the package under **Installed**. Select **Restart Idle Chats** to load the change in idle open chats. A chat in the middle of a response is left alone and loads the change when it restarts.
 
@@ -38,7 +38,7 @@ For instance, pause a package while comparing your usual workflow, then ask: “
 
 ## What to know
 
-The package page accepts a source directly; it does not offer a catalog browsing control. A public catalog and a fresh-profile catalog check are still outstanding. Obtain a source from its provider and review it before installation. The package installation, switch-off and removal flow has been checked in a Rath window, but plugin installation and catalog availability remain unconfirmed. A panel appears only while its plugin displays it in its chat; its tab is not restored after closing and reopening Rath.
+A panel appears only while its plugin displays it in its chat; its tab is not restored after closing and reopening Rath.
 
 Some packages offer **Update**; **Update All** is available when there are updateable packages. Updates that add code require individual review. Read **New since the installed version** before approving an update.
 
@@ -49,4 +49,4 @@ Some packages offer **Update**; **Update All** is available when there are updat
 - **Could not read the installed packages:** means the list could not be read; use the detail shown to investigate. If the page says **It does not add anything the agent can load.**, check that you were given the intended package.
 - **This panel is not showing right now. It appears here when the plugin draws it in its chat.** Return to that chat and check that the package is on. A plugin may stop displaying its panel, or its chat may have closed.
 
-See [Permissions](../permissions/), [Customizing Rath](../customizing/) and [Troubleshooting](../troubleshooting/).
+See [Permissions](/rath-docs/permissions/), [Customizing Rath](/rath-docs/customizing/) and [Troubleshooting](/rath-docs/troubleshooting/).

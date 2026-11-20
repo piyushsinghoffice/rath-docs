@@ -1,14 +1,12 @@
 ---
 title: "My stylesheets and UI sync"
-description: "Early: inspect, pause, restore, and sync your personal Rath interface."
+description: "Inspect, pause, restore, and sync your personal Rath interface."
 lastVerifiedVersion: "1.139.0"
 ---
 
-*Early: these customization controls are still being checked across different setups.*
-
 Use these commands to inspect your personal look, temporarily switch it off, return to an earlier version, or share your interface changes between computers. A stylesheet is a set of visual rules; you can ask Rath to make changes to it instead of writing those rules yourself. For choosing themes and making appearance requests, see [Changing how Rath looks](/rath-docs/appearance-and-themes/). For widgets and other additions, see [Making Rath yours](/rath-docs/customizing/).
 
-**Before you start:** Open the Command Palette with Command+Shift+P on a Mac or Ctrl+Shift+P elsewhere. To ask Rath for changes, connect a provider and check the access instructions in the appearance guide. Restoring and syncing require Git, a tool that keeps versions of changes. Sync also needs a private Git repository you own and access to it from each computer.
+**Before you start:** Open the Command Palette with Command+Shift+P on a Mac or Ctrl+Shift+P elsewhere. To ask Rath for changes, connect a provider and check the access instructions in the appearance guide. Restoring and syncing require Git, a tool that keeps versions of changes. If you need it, follow the [Git installation instructions](https://git-scm.com/install/) for your operating system. Sync also needs a private Git repository you own and access to it from each computer.
 
 ## Inspect or pause your look
 
@@ -31,19 +29,20 @@ This restores the saved personal interface changes together, not just one visual
 
 ## Sync your interface
 
-1. Choose **Rath: Set Up Sync for My UI**. In **Sync My UI Files**, enter the address of your private repository and submit it. Rath attempts a sync immediately. Use the same repository on another computer to bring the changes together.
-2. Look for **Synced.** or **Synced: the changes from the other computer were merged in.** Check the resulting interface on each computer. Rath syncs your stylesheet, components, renderers and quick actions; the setup prompt says keys and chats are not included.
-3. To sync again, choose **Rath: Sync My UI Now**. Automatic sync is off by default; if enabled in **Settings** under **Rath UI Sync**, it runs about 30 seconds after changes.
+1. Before syncing, check your personal interface files for sensitive information. They can contain anything written into them, including text from chats. Sync sends those files and their history to the repository; a public repository could expose them to others. Check that the repository is private and that its address is correct.
+2. Choose **Rath: Set Up Sync for My UI**. In **Sync My UI Files**, enter the address of your private repository and submit it. Rath attempts a sync immediately. Use the same repository on another computer to bring the changes together.
+3. Look for **Synced.** or **Synced: the changes from the other computer were merged in.** Check the resulting interface on each computer. Rath syncs your stylesheet, components, renderers and quick actions. Keys and chats are not included as separate items, but sensitive text copied into an interface file is included.
+4. To sync again, choose **Rath: Sync My UI Now**. Automatic sync is off by default. To turn it on, open **Settings**, search for `rath.ui.sync.auto`, and enable the setting under **Rath UI Sync**. It runs about 30 seconds after changes.
 
-If both computers changed the same item, the side with the later change wins a conflict; histories are kept. Inspect the result and use the restore command if you need an earlier version.
+When changes conflict, Rath prefers the side with the more recent saved version overall; a tie favors this computer. Both histories are kept. Some merges fail instead: inspect the result and use the restore command if you need an earlier version.
 
 ## Manage an extension Rath wrote
 
-An extension adds capabilities to Rath. Choose **Rath: Manage Extensions the Agent Wrote**, then select an extension under **Choose an extension the agent wrote**. Choose **Disable** to stop using it, or **Remove** to uninstall it. Rath confirms the action; removed extension files remain on your computer. To enable a disabled extension again, use the **Extensions** view.
+An extension adds capabilities to Rath. Choose **Rath: Manage Extensions the Agent Wrote**, then select an extension under **Choose an extension the agent wrote**. Choose **Disable** to stop using it, or **Remove** to uninstall it. Rath confirms the action; removed extension files remain on your computer. To enable a disabled extension again, open **Extensions** from the sidebar, find and select the extension, then choose **Enable**.
 
 ## If it doesn't work
 
-- **There is no saved version of your UI files yet.** means the picker has no history to offer. Git may be unavailable; install it and make a change before trying again. **Could not restore that version (is git installed?).** also points to Git as a possible cause.
+- **There is no saved version of your UI files yet.** means the picker has no history to offer. Git may be unavailable; follow the installation link above, then make a change and try again. **Could not restore that version (is git installed?).** also points to Git as a possible cause.
 - **No remote is set up yet.** means you should run **Rath: Set Up Sync for My UI** first. If the address is rejected, check its format and any organization restrictions. **Could not sync:** may indicate a connection or access problem; check access to the private repository and try again. **The two versions could not be merged. Nothing was changed.** means the merge did not complete.
 - **Your custom look is paused. Your widgets still work.** can appear if styles hide an essential control. Fix the style and choose **Turn On**. Organization restrictions may also prevent customizations or sync; see [Organisation policy](/rath-docs/organisation-policy/).
 - **The agent has not written any extension that is loaded.** means there is nothing in that management list to select.

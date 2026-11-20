@@ -11,7 +11,7 @@ Before you start, open a Rath chat for the focus command, and open the folder as
 ## Show the sidebar and return to a chat
 
 1. Open the Command Palette and select **Rath: Toggle Rath Sidebar**. The Rath sessions sidebar appears. Run the same command again to hide it.
-2. Open or select a chat, then work elsewhere in the window. To return to its message box, choose **Rath: Focus Chat Input** in the palette. You can also press Command+Shift+' on a Mac or Ctrl+Shift+' elsewhere.
+2. Open or select a chat, then work elsewhere in the window. To return to its message box, choose **Rath: Focus Chat Input** in the palette. You can also press Command+Shift+' on a Mac or Ctrl+Shift+' elsewhere. If your keyboard makes that shortcut awkward, use the Command Palette instead.
 3. The chat is brought into view and the cursor moves to its message box. Type a request such as “Summarize our discussion in three points” and select **Send**.
 
 For example, hide the sidebar when you need more room to read, then show it again to find a conversation. After reading another document, use the focus command and ask: “What should I check next?”
@@ -21,26 +21,26 @@ For example, hide the sidebar when you need more room to read, then show it agai
 ## Inspect recorded activity
 
 1. Open the folder containing the chats you want to investigate. Choose **Rath: Open Knowledge Graph** from the Command Palette, or select the graph icon in the Rath sessions view.
-2. In **Rath: Knowledge Graph**, look at the dots and connecting lines. The legend identifies **Session**, **File**, **Edited**, **Read**, **Spawned**, and **Messaged**. A session is one conversation with Rath.
+2. In **Rath: Knowledge Graph**, look at the dots and connecting lines. The legend identifies **Session**, **File**, **Edited**, **Read**, **Spawned**, and **Messaged**. A session is a chat with Rath.
 3. Select a dot or line to inspect its recorded messages or activity. Use **Close** to dismiss the detail. Check or clear **Messages**, **Tool calls**, **Tool results**, or **Thinking** to change what appears, and select **Refresh** to fetch the latest records.
 
-For example, select a document dot to inspect recorded reads and edits, then return to chat and ask: “Which conversations worked on the project brief?” The graph reflects recorded activity; edits made outside Rath or through terminal commands may not appear. See [Finding out what happened across your chats](/rath-docs/session-graph/) for other ways to investigate.
+For example, select a document dot to inspect recorded reads and edits, then return to chat and ask: “Which conversations worked on the project brief?” The graph reflects recorded activity; edits made outside Rath or through terminal commands may not appear. Its details can show message text and tool results containing sensitive information. Anyone who can see your screen can read them, so check before sharing it. See [Finding out what happened across your chats](/rath-docs/session-graph/) for other ways to investigate.
 
 <!-- SCREENSHOT: Knowledge graph with a selected item and its detail panel -->
 
 ## Choose suggestions for your message
 
-Prompt suggestions continue text as you type in the chat box. They are off by default, and using them can incur provider charges. Their model is separate from the model answering your chat.
+Prompt suggestions continue text as you type in the chat box. They are off by default, and using them can incur provider charges. Their model is separate from the model answering your chat. Requests send the text you have typed, along with available active document and recent chat context, to the selected provider.
 
-1. In settings, find the chat prompt suggestions option and enable it. Choose the suggestion provider there; the registered default is DeepSeek. Set an API key for that provider with **Rath: Set Provider API Key…**.
+1. Open Settings and select **AI** > **General**. Search for `prompt suggestions`, enable the option to show suggestions, and choose a provider. The default provider is DeepSeek. Set an API key for that provider with **Rath: Set Provider API Key…**.
 2. Choose **Rath: Choose Prompt Suggestion Model** from the palette. While the list loads, you see **Loading models for** the provider. Select a model under **Select a model for chat prompt suggestions**.
-3. Alternatively, select **Enter model id manually…**, enter an ID supplied by your provider, and confirm. Return to a chat and begin typing; a suggestion can appear as faint continuation text. Review it before sending your message.
+3. Alternatively, select **Enter model id manually…**, enter an ID supplied by your provider, and confirm. Return to a chat and begin typing; a suggestion can appear as faint continuation text. Press Tab to accept it or Esc to dismiss it. Review your message before sending it.
 
 Choose a model that your provider offers and check its price and limits: suggestions make paid requests as you type. Selecting a model alone does not turn the feature on. You can disable the option in settings when you no longer want suggestions.
 
 ## Copy settings to the terminal product
 
-If you also use Rath's terminal product, this command copies supported engine settings you personally set in Rath. It leaves unset settings to the terminal product and does not copy managed values.
+If you also use Rath from a terminal, this command copies your personally set options for how Rath works. These include the shell sandbox, cards, apps and interfaces in chat, tool search, saved notes, connected services, handling old tool results, keeping working state, and commands run around tool calls. Defaults and managed values are not copied; options you have not set stay as they are in the terminal product.
 
 1. Set the supported options you want in Rath first, then choose **Rath: Copy My Engine Settings to the Terminal Product**.
 2. Review **Copy these engine settings to the terminal product?** and the displayed values. Select **Copy** to proceed, or cancel to leave them unchanged.

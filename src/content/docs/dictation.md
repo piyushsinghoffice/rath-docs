@@ -1,10 +1,8 @@
 ---
 title: "Dictation"
-description: "Early: install a speech model and speak a message into Rath."
+description: "Install a speech model and speak a message into Rath."
 lastVerifiedVersion: "1.139.0"
 ---
-
-Dictation is early; the current speech setup has not yet been retested in the installed app.
 
 Speak a request into the chat message box when it is easier than typing. Rath turns your voice into text for you to review and send. The built-in speech model runs on your computer; the speech model is separate from the model that answers your chat.
 
@@ -22,8 +20,8 @@ The built-in model turns speech into text on your computer. Downloading it does 
 
 ## Speak a message
 
-1. In a Rath chat, place the cursor where you want the words in the message box. Select the microphone, whose hint says **Tap or hold to record**. You can also press Command+Period on a Mac or Ctrl+Period elsewhere.
-2. Speak your request. A waveform indicates recording; the microphone hint changes to **Stop Dictation**. The model may take a moment to prepare.
+1. In a Rath chat, place the cursor where you want the words in the message box. Select the microphone, whose hint says **Tap or hold to record**. With the message box focused, you can also press Command+Period on a Mac or Ctrl+Period elsewhere.
+2. Speak your request. A waveform indicates recording; the microphone hint changes to **Stop Dictation**. If the speech model is still preparing, wait for recording to start.
 3. Tap the microphone or shortcut again to stop. Alternatively, hold the button or shortcut while speaking and release it to stop.
 4. Check the words in the message box and correct any mistakes. Select **Send** when the request says what you intended.
 
@@ -35,10 +33,10 @@ Try saying “Summarize these notes in five bullet points.” For a longer reque
 
 In **Speech to Text**, **Speech language** defaults to **automatic**, which lets Rath choose the language. Enter a language code such as `en`, `de` or `pt-br` to specify one; use **Reset** to return to the default. The change applies the next time you start dictation.
 
-If you already have a compatible speech model, you can choose it under **Speech-to-text model**:
+If you already have a compatible speech model and know its kind, you can choose it under **Speech-to-text model**. Otherwise, use the built-in model above.
 
 1. Select **Change…**, then choose the model in **Choose the Speech Model File**.
-2. At **Give the model a short name**, accept or enter a name. At **Which kind of model is it?**, choose its family. Use the family supplied with your model.
+2. At **Give the model a short name**, accept or enter a name. At **Which kind of model is it?**, choose the kind supplied with your model.
 3. Confirm the change when prompted. The next dictation uses the new choice. The row shows **Using your own model:** followed by its name and, if found, **The model file is there.**
 4. To return to the built-in choice, select **Reset** for **Speech-to-text model**. If necessary, install the built-in model as described above.
 

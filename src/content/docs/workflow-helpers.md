@@ -8,7 +8,9 @@ Rath has shortcuts for common project tasks. Use them to explain a confusing ter
 
 ## Before you start
 
-Open the relevant project and a Rath chat with a connected model. For terminal help, select the terminal that contains the output. For change-related tasks, open the project containing those changes. Actions that edit or run commands depend on your [permission mode](/rath-docs/permissions/).
+Open the relevant project and a Rath chat with a connected model. For terminal help, select the terminal that contains the output. To open the Command Palette, press Ctrl+Shift+P (Cmd+Shift+P on a Mac), then type the action's name.
+
+For helpers that run commands or change files, choose **Ask before changes** and approve the necessary requests, or choose **Full access**. In **Ask before changes**, look-only commands run without asking by default. **Read-only** and **Plan** cannot run commands or make the fixes described below. See [Permission modes](/rath-docs/permissions/).
 
 ## Explain or fix terminal output
 
@@ -17,7 +19,7 @@ Open the relevant project and a Rath chat with a connected model. For terminal h
 3. Read the resulting **Explain Terminal Output** task. Rath is asked to explain the command and its output, including warnings or errors.
 4. If you want Rath to investigate and fix a failure instead, choose **Rath: Fix Last Terminal Command Failure**. Review its explanation and any changes it makes.
 
-Rath receives up to the last 120 lines of the active terminal. Check that these lines contain the relevant error before starting. For example, after a failed check, use the fix action; after an unfamiliar warning, use the explain action. You can follow up in chat with “Explain that warning without technical jargon” or “What should I check before accepting this fix?”
+These actions send up to the last 120 lines of the active terminal to your connected model. Check that they contain the relevant error and no sensitive information you do not want to share. This limit differs from **Attach terminal output** in chat, which attaches up to 150 lines. For example, after a failed check, use the fix action; after an unfamiliar warning, use the explain action. You can follow up in chat with “Explain that warning without technical jargon” or “What should I check before accepting this fix?”
 
 ![The terminal's right-click menu with Explain Last Terminal Command and Fix Last Terminal Command Failure](../../assets/screenshots/terminal-menu.png)
 
@@ -32,6 +34,6 @@ For example, after finishing a change, generate a description and ask “Make th
 
 ## If it doesn't work
 
-**The active terminal has no output to look at.** means the selected terminal has no readable output. Select the terminal containing the result and try again. If the relevant error is older than the last 120 lines, narrow the output or explain it in chat. If an action cannot run a command or change a file, check the permission mode and review any approval request. If Rath reports that a test or conflict needs a decision, inspect its explanation before proceeding.
+**The active terminal has no output to look at.** means the selected terminal has no readable output. Select the terminal containing the result and try again. If the relevant error is older than the last 120 lines, narrow the output or explain it in chat. If an action cannot run a command or change a file, switch to **Ask before changes** or **Full access** and review any approval request. If Rath reports that a test or conflict needs a decision, inspect its explanation before proceeding.
 
 See [Permission modes](/rath-docs/permissions/), [Reviewing changes](/rath-docs/reviewing-changes/) and [Chatting with Rath](/rath-docs/chatting/).

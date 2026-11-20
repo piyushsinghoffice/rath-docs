@@ -4,68 +4,66 @@ description: "Early: schedule tasks, respond to events, and control unattended a
 lastVerifiedVersion: "1.139.0"
 ---
 
-This feature is new; if something behaves differently from this page, tell us.
+Automations repeat a request on a schedule or when something happens. Use one for a regular summary or feed check. Review results before relying on them.
 
-Automations repeat a request on a schedule or when an event occurs. Use one to prepare a regular summary or check for new information without starting each run yourself. You can test it immediately, inspect the result, and limit what Rath can do while you are away.
-
-**Before you start:** Connect a provider and make a model available. Run **Open Agents Window** from the Command Palette and have the folder Rath should inspect ready. Keep the Agents Window open for scheduled and event checks. See [Agents Window](/rath-docs/agents-window/) and [Provider connections](/rath-docs/provider-connections/).
+**Before you start:** Connect a provider, make a model available, and have the folder Rath should inspect ready. Run **Open Agents Window** from the Command Palette. Keep the Agents Window open: scheduled and event checks do not run while Rath is closed. With several windows open, only one checks for events, about once a minute.
 
 ## Create and test a schedule
 
-1. In the Agents Window, open **Customizations**, then **Automations**. Select **Create Automation** or **New Automation**.
-2. Give it a **Name**, such as `Morning review`. Under **Schedule**, choose **Hourly**, **Daily**, or **Weekly**; set **Time** and **Day of week** when offered. Choose **Manual** if you only want to start it yourself or use an event trigger.
-3. Under **Target**, select the folder containing the material. In **Prompt**, write the task, for example: “Read the project notes and summarize the open questions. Do not change anything.”
-4. Check the model and **Permissions** in **Session configuration**. **Read-only** permits reading and searching; **No tools** answers without tools. **Full access** can edit files and run commands without someone watching. Start with **Read-only** for a summary.
-5. Leave **Enabled (the scheduler runs this automation when due)** selected and choose **Create**. The automation appears as a card. Select **Run now** to test it; the card shows **Running** while it works.
-6. When the notification says **Automation "Morning review" finished.**, select **Show Result**. The result contains the prompt, a short account of the steps and the answer. You can also run **Rath: Show Automation Result** from the Command Palette to open the latest saved result. **History** lists runs.
+1. In the Agents Window, open **Customizations**, then **Automations**. Select **Create Automation** if the list is empty, or **New Automation** if it already contains automations.
+2. Enter a **Name**, such as `Morning review`. Under **Schedule**, choose **Hourly**, **Daily**, or **Weekly** and set **Time** and **Day of week** when offered. **Manual** starts only when you run it or an event triggers it.
+3. Under **Target**, select your folder. In **Prompt**, enter: “Read the project notes and summarize the open questions. Do not change anything.”
+4. Check the model and **Permissions** in **Session configuration**. Start with **Read-only** for a summary. **No tools** cannot read files; **Full access** can edit files and run commands unattended. If no permission is selected, the `rath.agent.automations.permissionMode` setting applies, with read-only as its default. See [Permission modes](/rath-docs/permissions/).
+5. Leave **Enabled (the scheduler runs this automation when due)** selected and choose **Create**. Select **Run now** on the new card; it shows **Running** while it works.
+6. When the notification says **Automation "Morning review" finished.**, select **Show Result** to read the prompt, steps and answer. **History** lists runs.
 
-<!-- SCREENSHOT: Automation setup showing the schedule, prompt and permission controls -->
+## Start from a feed
 
-## Start from an event
+An RSS feed lists published items. To summarize new ones:
 
-An event trigger is a setting that tells Rath what to watch. For example, an RSS feed is a regularly updated list of published items.
-
-1. Create an enabled automation named `Feed review` with **Schedule** set to **Manual** and this **Prompt**: “Summarize the new items and list anything relevant to our project.”
-2. Open **Settings** in the Agents Window and search for `rath.agent.automations.eventTriggers`. Add an entry to that setting's list with `automation` set to `Feed review`, `source` set to `rss`, and `url` set to the feed's full web address. For example:
+1. Create an enabled automation named `Feed review`, with **Schedule** set to **Manual** and **Prompt** set to: “Summarize the new items and list anything relevant to our project.”
+2. Open **Settings**, search for `rath.agent.automations.eventTriggers`, and select **Edit in settings.json**. Add this setting inside the outer braces, separating it from other settings with a comma. Replace the address with a real feed. If the setting already exists, add the object inside its square brackets, separated from existing entries by a comma.
 
    ```json
-   { "automation": "Feed review", "source": "rss", "url": "https://example.com/feed.xml" }
+   "rath.agent.automations.eventTriggers": [
+     { "automation": "Feed review", "source": "rss", "url": "https://example.com/feed.xml" }
+   ]
    ```
 
-   Replace the example address with a real feed. The first check remembers existing items; later new items can start a run. Checks default to every 30 minutes. Look in **History** and open the result after a new item appears.
-3. Other sources include `fileChanged` for a changed file, `webhook` for a message sent to Rath's local listener, and `mcp` for new results from a connected service's tool. Their entries need additional details described in the setting. A webhook is off by default; enabling it requires a secret token of at least 16 characters. Anyone with that token can start the matching automation, so keep it private.
+3. Save your changes. The first check records existing items; later new items can start a run. Feed checks default to every 30 minutes. Look in **History** for the result.
 
-## Control actions and approvals
+Other event sources include changed files, webhooks and connected services. The setting describes their details. Webhooks are off by default and require a secret token of at least 16 characters; anyone with it can start the matching automation.
 
-Without a matching action policy, the automation uses its selected permission. Ordinary questions Rath would ask during an unattended run are declined automatically. To approve a specific action during a run, use an action policy: a set of rules for the tools Rath can call.
+## Approve actions
 
-1. In **Settings**, search for `rath.agent.automations.actionPolicies`. Add an entry naming the automation. For an automation called `Notes update`, this example asks before each use of the editing tool and denies other unmatched actions:
+Without a matching action policy, an automation uses its selected permission, and ordinary questions are declined automatically. A policy sets rules for actions Rath can take:
+
+1. In **Settings**, search for `rath.agent.automations.actionPolicies` and select **Edit in settings.json**. Add this setting inside the outer braces, separated from other settings by a comma. If it already exists, add the object inside its square brackets, separated from existing entries by a comma.
 
    ```json
-   { "automation": "Notes update", "default": "deny", "rules": [{ "tool": "edit", "action": "ask" }] }
+   "rath.agent.automations.actionPolicies": [
+     { "automation": "Notes update", "default": "deny", "rules": [{ "tool": "edit", "action": "ask" }] }
+   ]
    ```
 
-2. Give **Notes update** a prompt such as: “Review the meeting notes and correct spelling; leave the meaning unchanged.” When an edit is requested, a notification says **Automation "Notes update" wants to use …**. Inspect it and choose **Approve** or **Reject**. If you do not answer, the request is refused after 30 minutes by default.
-3. Run **Rath: Show Automation Action Log** to inspect recorded decisions. Only automations with a policy entry are recorded there. Rules are checked in order; `auto` allows an action, `ask` requests approval, and `deny` refuses it. Unmatched actions default to deny; built-in reading tools remain allowed unless a rule says otherwise. A policy makes tools available and checks each call, even if the automation's selected permission is more restrictive.
+2. Save, then create an automation named `Notes update` with this **Prompt**: “Review the meeting notes and correct spelling; leave the meaning unchanged.” When an edit is requested, inspect the notification and choose **Approve** or **Reject**.
+
+The request is refused after 30 minutes by default. A rule's `waitMinutes` can be set from 1 to 240, but the run time limit can stop the run first. Rules are checked in order; unmatched actions default to deny, except reading. A policy makes actions available even if the selected permission is more restrictive. Use **Rath: Show Automation Action Log** to review decisions for automations with a policy.
 
 ## Stop and review
 
-To prevent future runs, open the card's **More Actions...** menu and choose **Disable**. Choose **Enable** to resume. To stop a run already underway, use **Stop** on its item in **History**. **Delete** permanently removes the automation and its run history. Review results before relying on them; the latest ten saved result copies are retained, and long results may be shortened.
-
-## What to know
-
-The code supports event triggers, policy approvals and saved results, but their complete flow has not been confirmed in a live window. Event checks run about once a minute; feed and connected-service checks have their own intervals. A run can also be stopped by its time limit. Model use may incur provider charges.
+Choose **Disable** from a card's **More Actions...** menu to prevent future runs, or **Enable** to resume. To stop a current run, select **Stop** on its item in **History**. **Delete** permanently removes the automation and its run history; runs already underway continue. The latest ten result copies are retained; long results may be shortened. Model use may incur provider charges.
 
 ## If it doesn't work
 
-- **Name is required.**, **Prompt is required.**, or **Workspace folder is required.**: fill in the missing field and try **Create** again.
-- **Automation '…' cannot start until its agent becomes available.**: check your provider connection and model, then try **Run now** again.
-- **No automation result has been saved yet.**: wait for a run to finish and use **Show Result**. Check **History** for the run.
-- **Nothing recorded yet.** in the action log: add a policy for that automation and run it again. Runs without a matching policy are not recorded there.
-- A feed produces no initial run: the first check records existing items. Check the address and wait for a new item. A disabled automation does not run from its schedule or event trigger.
+- **Name is required.**, **Prompt is required.**, or **Workspace folder is required.**: fill in the missing field.
+- **Automation '…' cannot start until its agent becomes available.**: check the provider connection and model, then try **Run now** again.
+- **No automation result has been saved yet.**: wait for a run to finish and check **History**.
+- **Nothing recorded yet.** in the action log: add a policy and run the automation again. Runs without a matching policy are not recorded there.
+- No feed run: the first check records existing items. Check the address, ensure the automation is enabled, and wait for a new item.
 
 ## Related pages
 
-- [Agents Window](/rath-docs/agents-window/) for opening and navigating sessions
-- [Permission modes](/rath-docs/permissions/) for deciding what Rath may do
-- [Provider connections](/rath-docs/provider-connections/) and [Troubleshooting](/rath-docs/troubleshooting/) for connection problems
+- [Agents Window](/rath-docs/agents-window/)
+- [Permission modes](/rath-docs/permissions/)
+- [Provider connections](/rath-docs/provider-connections/) and [Troubleshooting](/rath-docs/troubleshooting/)
