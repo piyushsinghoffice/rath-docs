@@ -6,7 +6,9 @@ lastVerifiedVersion: "1.139.0"
 
 Subagents let Rath hand a piece of work to another agent and bring its result back to your chat. This can help when a request has independent parts, such as examining several topics, or when one piece of work should build on an earlier result. You can ask for delegation, but Rath chooses how to carry out your request; a subagent card appears only if it actually delegates.
 
-Before you start, open a Rath chat and choose a permission mode appropriate for the work. **Read-only**, **Plan**, and **No tools** do not make delegation available. **Full access** permits tools that can change your work and run commands, so use it only when you are comfortable with that access. See [Permission modes](/rath-docs/permissions/) before deciding. A subagent can have its own tool limits; do not assume that asking for a review alone prevents changes. For **Ask before changes**, the approval experience for delegated work has not been established here.
+Before you start, open a Rath chat and choose a permission mode appropriate for the work. **Read-only**, **Plan**, and **No tools** do not make delegation available. In **Ask before changes**, delegated agents are limited to reading and finding information. **Full access** permits tools that can change your work and run commands, so use it only when you are comfortable with that access. See [Permission modes](/rath-docs/permissions/) before deciding. A subagent can have its own tool limits; under **Full access**, do not assume that asking for a review alone prevents changes.
+
+Each subagent makes additional model requests. Depending on your provider and plan, delegating work can increase your usage and costs.
 
 ## Delegate and follow the work
 
@@ -29,7 +31,7 @@ When several tasks are independent, Rath can run them together. It can also arra
 ## If it doesn't work
 
 - **No card appears:** Check **Permission**. Delegation is unavailable in **Read-only**, **Plan**, and **No tools**. If you need those limits, ask Rath to do the investigation in the main chat instead. If you choose **Full access**, understand the access it grants first.
-- **Waiting for previous subagent** or **Waiting for subagent** remains visible: open the earlier or running card to inspect its activity. Some work takes time. A subagent is stopped after 15 minutes; a failed run can report **Subagent timed out after 900s and was stopped.** Return to the main chat and ask Rath to retry a smaller part or explain what it completed.
+- **Waiting for previous subagent** or **Waiting for subagent** remains visible: open the earlier or running card to inspect its activity. Some work takes time. A subagent is stopped after 15 minutes. Return to the main chat and ask Rath to retry a smaller part or explain what it completed.
 - **Failed** or **No subagent result was returned.**: inspect the card and the main chat for details. Ask Rath to explain the failure or retry with a narrower task. If you need to interrupt the current work, use **Stop** in the main chat; then tell Rath what to do next.
 - **Loading the full transcript…** can appear while the tab loads. **Transcript not available** means the full record could not be shown. Return to the main chat and use the card and Rath's response for the available result; ask for a fresh attempt if you need more detail.
 

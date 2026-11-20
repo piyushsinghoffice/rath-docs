@@ -8,11 +8,13 @@ lastVerifiedVersion: "1.139.0"
 
 Tools let Rath take actions, such as searching or working with your project. Use the Tools screen to find an action, switch it on or off, or request confirmation before it runs. Availability also depends on the chat's permission mode: switching a tool on does not grant permissions that the mode withholds.
 
+**Important:** If an **On demand** tool was enabled when the chat started, switching it off during that chat does not guarantee it stays off: Rath can load it again when needed. To keep it off, clear its **Enable** checkbox, switch **On-demand Tools** off, and start a new chat. Use an appropriate permission mode as well.
+
 Before you start, open a Rath chat. To use tools from a connected service, set up that service first; see [MCP servers](/rath-docs/mcp-servers/).
 
 ## Find and change a tool
 
-1. Open the command palette and choose **Rath: Manage Tools…**. The same list is also in settings under **AI > Tools**.
+1. Open the command palette and choose **Rath: Manage Tools…**. 
 2. Wait for the list. It has **Tool Name** and **Description** columns and two checkbox columns. Hover over their icons to see **Enable** and **Ask User**.
 3. Enter a name or word in **Search tools by name or description…**. Search also matches names and descriptions of individual actions within a tool. Use **Clear search** to restore the list.
 4. To narrow the list by type, choose **Filter by category**, then **Base Tools**, **Extension Tools**, **MCP Tools**, or **IDE Tools**. Choose **All Categories** to see all sections again. Select a category's chevron to collapse or expand it; its count shows matching tools.
@@ -25,7 +27,7 @@ The checkbox changes immediately. When Rath next needs an enabled, available too
 
 ## Match tools to your permissions
 
-For a chat where Rath should answer without tools, select **No tools** in the chat's permission selector. For inspection without changes, choose **Read-only**. To allow broader actions, choose **Full access**; it can read, edit files and run commands. The separate **Ask before changes** and **Plan** modes offer other choices; see [Permission modes](/rath-docs/permissions/) for their behavior.
+For a chat where Rath should answer without tools, select **No tools** in the chat's permission selector. For inspection without changes, choose **Read-only**. To allow broader actions, choose **Full access**; it can read, edit files and run commands. **Plan** has the same limited set of inspection tools as **Read-only**. In **Ask before changes**, Rath asks before edits and commands, except that look-only commands run without asking by default. Many additional tools are unavailable in these modes, even if enabled here. See [Permission modes](/rath-docs/permissions/) for details.
 
 A tool may appear in the list even when the current mode cannot use it. Connected MCP tools require **Full access** and an enabled service connection. A **Not configured** badge means further setup is needed. Enabling a tool does not configure its service or override the permission mode.
 
@@ -33,13 +35,11 @@ A tool may appear in the list even when the current mode cannot use it. Connecte
 
 - With **Read-only**, ask: “Read the project and explain what it does.” Check the answer against the project.
 - Find a tool you want Rath to ask about, select **Ask User**, then request an appropriate task, such as “Find the project brief in my connected service.” If Rath chooses that tool, review its request before allowing it.
-- To reduce available actions, clear **Enable** for a tool you do not want, then ask: “Summarize the information I have already provided.” Turn it back on later if needed. Read the on-demand limitation below first.
+- To reduce available actions, clear **Enable** for a tool you do not want, then ask: “Summarize the information I have already provided.” Turn it back on later if needed. Follow the on-demand guidance below when switching off an **On demand** tool.
 
 ## What to know
 
 **On-demand Tools** loads certain less frequently needed tools when Rath asks for them, saving space in the information sent to the model. It applies to new chats in **Full access**; read-only and no-tools chats are unaffected. The list marks the relevant tools **On demand**.
-
-When this option is on, Rath's on-demand search can activate a listed on-demand tool even if you switched that tool off. If you need a tool to stay off, switch **On-demand Tools** off and start a new chat; use an appropriate permission mode as well. This guide is based on the implementation; the complete interaction has not been confirmed in a live Rath window.
 
 ## If it doesn't work
 
