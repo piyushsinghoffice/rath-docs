@@ -26,7 +26,7 @@ For example, choose a light theme for a bright room, a dark theme for a darker w
 4. If Rath proposes a setting change, read **Allow the Agent to Change a Setting?** The dialog shows **Now** and **New**. Select **Allow** if the proposed value is what you want; otherwise dismiss the dialog. After approval, check the window or editor for the change.
 5. To reverse an approved setting change, open the Command Palette and choose **Rath: Undo the Agent's Last Setting Change**. Rath reports **Put back the setting** followed by its name. Repeat it to step back through up to the last 30 agent setting changes.
 
-<!-- SCREENSHOT: Appearance setting approval showing current and proposed values -->
+![The approval window: the setting the agent wants to change, its current and new value, Cancel and Allow](../../assets/screenshots/appearance-approval.png)
 
 ## Control your styles
 
